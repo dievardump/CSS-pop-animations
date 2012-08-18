@@ -1,0 +1,111 @@
+html, body {
+    width: 100%;
+    heigh: 100%;
+    background-color: #222222 !important;
+}
+
+.scale {
+    width:400px;
+    margin: 15px;
+    display: inline-block;
+}
+.scale p {
+    padding: 10px;
+}
+
+.scale .parent, 
+.scale .parent-static, 
+.scale .vert, 
+.scale .horiz {
+    height: 111px;
+}
+
+.scale .parent {
+    overflow:hidden;
+
+    -moz-perspective: 1000px; 
+    -moz-transform-style: preserve-3d; 
+    -webkit-perspective: 1000px; 
+    -webkit-transform-style: preserve-3d; 
+    -o-perspective: 1000px; 
+    -o-transform-style: preserve-3d; 
+    -ms-perspective: 1000px; 
+    -ms-transform-style: preserve-3d; 
+    perspective: 1000px; 
+    transform-style: preserve-3d; 
+
+/*    -moz-animation: grow linear 0.2s; 
+    -webkit-animation: grow linear 0.2s; 
+    -o-animation: grow linear 0.2s; 
+    -ms-animation: grow linear 0.2s; 
+    animation: grow linear 0.2s; */
+
+}
+
+.scale .vert {
+    border-radius : 5px;
+    
+    background-color: #F8F8F8;
+
+    -moz-transform-origin: top; 
+    -webkit-transform-origin: top; 
+    -o-transform-origin: top; 
+    -ms-transform-origin: top; 
+    transform-origin: top; 
+
+
+    -moz-animation: pop-vertical 0.5s linear ; 
+    -webkit-animation: pop-vertical 0.5s linear ; 
+    -o-animation: pop-vertical 0.5s linear ; 
+    -ms-animation: pop-vertical 0.5s linear ; 
+    animation: pop-vertical 0.5s linear ; 
+}
+
+
+.scale .horiz {
+    border-radius : 5px;
+    
+    background-color: #F8F8F8;
+
+    -moz-transform-origin: left center; 
+    -webkit-transform-origin: left center; 
+    -o-transform-origin: left center; 
+    -ms-transform-origin: left center; 
+    transform-origin: left center; 
+
+
+    -moz-animation: pop-horizontal 0.5s linear ; 
+    -webkit-animation: pop-horizontal 0.5s linear ; 
+    -o-animation: pop-horizontal 0.5s linear ; 
+    -ms-animation: pop-horizontal 0.5s linear ; 
+    animation: pop-horizontal 0.5s linear ; 
+}
+    .scale .horiz.translate {        
+        -moz-animation: pop-horizontal-translate 0.5s linear ; 
+        -webkit-animation: pop-horizontal-translate 0.5s linear ; 
+        -o-animation: pop-horizontal-translate 0.5s linear ; 
+        -ms-animation: pop-horizontal-translate 0.5s linear ; 
+        animation: pop-horizontal-translate 0.5s linear ; 
+    }
+    
+    .scale .horiz.right {
+        -moz-transform-origin: right center; 
+        -webkit-transform-origin: right center; 
+        -o-transform-origin: right center; 
+        -ms-transform-origin: right center; 
+        transform-origin: right center; 
+        
+        -moz-animation: pop-horizontal-right 0.5s linear ; 
+        -webkit-animation: pop-horizontal-right 0.5s linear ; 
+        -o-animation: pop-horizontal-right 0.5s linear ; 
+        -ms-animation: pop-horizontal-right 0.5s linear ; 
+        animation: pop-horizontal-right 0.5s linear ; 
+    }
+        .scale .horiz.right.translate {
+            -moz-animation: pop-horizontal-right-translate 0.5s linear ; 
+            -webkit-animation: pop-horizontal-right-translate 0.5s linear ; 
+            -o-animation: pop-horizontal-right-translate 0.5s linear ; 
+            -ms-animation: pop-horizontal-right-translate 0.5s linear ; 
+            animation: pop-horizontal-right-translate 0.5s linear ; 
+        }
+    
