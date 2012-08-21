@@ -44,7 +44,7 @@ html, body {
 }
 
     .pop .anim {
-        animation-duration: 0.5s;
+        animation-duration: .75s;
         animation-timing-function: linear;
     }
 
