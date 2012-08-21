@@ -119,6 +119,8 @@ html, body {
 }
 
 .animate .pop.right .horiz {
+    position: absolute;
+    right: 0;
     animation-name: pop-width, pop-rotate-y-right;
 }
 
