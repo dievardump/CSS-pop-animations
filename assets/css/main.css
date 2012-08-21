@@ -4,39 +4,68 @@ html, body {
     width: 100%;
     background: url(http://subtlepatterns.com/patterns/concrete_wall.png);
     font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.3em;
     font-weight: 700;
 }
 
-.col {
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: pink;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+h2 {
+    color: lightBlue;
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+.links {
     float: left;
-    overflow: visible;
-    position: relative;
-    padding: 15px;
-    width: 400px;
+    padding: 20px;
+    margin: 10px;
 }
 
-.col.small {
-    width: 200px;
-    text-align: center;
-    padding-top: 25px;
-}
-
-.toggle {
+.links a {
     color: #ffffff;
     text-decoration: none;
 }
 
-.toggle:hover {
+.links a:hover {
     text-decoration: underline;
 }
 
+.targets {
+    overflow: hidden;
+    position: relative;
+    padding-top: 45px;
+}
+
+.target {
+    display: none;
+}
+
+.target.pop {
+    display: block;    
+}
+
+ol {
+    padding-left: 20px;
+}
+
 .pop {
-    width: 100%;
+    width: 400px;
     margin: 15px 0;
     overflow: visible;
     text-align: center;
+    margin: 0 auto;
 }
 
 .pop p {
@@ -65,66 +94,66 @@ html, body {
 
 
 /** here begin the animations css **/
-.animate .pop {
+.pop {
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
 }
 
-.animate .pop .anim {
+.pop .anim {
     animation-duration: .75s;
     animation-timing-function: linear;
 }
 
-.animate .pop .vert {
+.pop .vert {
     transform-origin: top;
 }
 
-.animate .pop.bottom .vert {
+.pop.bottom .vert {
     transform-origin: bottom;
 }
 
-.animate .pop .vert {
+.pop .vert {
     animation-name: pop-height, pop-rotate-x;
 }
 
-.animate .pop.bottom .vert {
+.pop.bottom .vert {
     position: absolute;
     bottom: 0;
     animation-name: pop-height, pop-rotate-x-bottom;
 }
 
-.animate .pop .vert.translate {
+.pop .vert.translate {
     animation-name: pop-height, pop-rx-ty;
 }
 
-.animate .pop.bottom .vert.translate {
+.pop.bottom .vert.translate {
     animation-name: pop-height, pop-rx-ty-bottom;
 }
 
-.animate .pop .horiz {
+.pop .horiz {
     transform-origin: left center;
 }
 
-.animate .pop.right .horiz {
+.pop.right .horiz {
     transform-origin: right center;
 }
 
-.animate .pop .horiz {
+.pop .horiz {
     animation-name: pop-width, pop-rotate-y;
 }
 
-.animate .pop .horiz.translate {
+.pop .horiz.translate {
     animation-name: pop-width, pop-ry-tx;
 }
 
-.animate .pop.right .horiz {
+.pop.right .horiz {
     position: absolute;
     right: 0;
     animation-name: pop-width, pop-rotate-y-right;
 }
 
-.animate .pop.right .horiz.translate {
+.pop.right .horiz.translate {
     animation-name: pop-width, pop-ry-tx-right;
 }
 
