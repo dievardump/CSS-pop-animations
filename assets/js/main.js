@@ -1,29 +1,27 @@
-(function () {
+(function (window, document) {
 	'use strict';
 	var links = document.getElementsByClassName('links')[0].getElementsByTagName('a'),
-		targets = document.getElementsByClassName('target'),
-		current = 0,
-		className = 'pop';
+		targets = document.getElementById('target-container'),
+		aTargets = document.querySelectorAll('.pop'),
+		current = 0;
 
-	function removeClass (element, className) {
-		element.className = element.className.replace(new RegExp('(^|\\s)' + className + '(?:\\s|$)'), '$1');
-	};
+	Array.prototype.forEach.call(aTargets, 
+		function(element) {
+			targets.removeChild(element);
+		});
 
-	function addClass (element, className) {
-		element.className += ' ' + className;
-	};
+	targets.style.display = 'block';
 
-	Array.prototype.forEach.call(links, 
+	Array.prototype.forEach.call(links,
 		function (link, i) {
-			link.addEventListener('click', 
+			link.addEventListener('click',
 				function (event) {
 					event.preventDefault();
-					removeClass(targets[current], className);
+					targets.removeChild(aTargets[current]);
 					current = i;
-					addClass(targets[current], className);
-			}, false);
-		}
-	);
+					targets.appendChild(aTargets[current]);
+				}, false);
+		});
 
-	addClass(targets[current], className);
-}());
+	targets.appendChild(aTargets[current]);
+}(window, window.document));
